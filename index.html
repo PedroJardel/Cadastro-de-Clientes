@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="shortcut icon" href="Perfil-Empresa-Instagram_2.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>BestWay Design</title>
+</head>
+
+<body>
+    <div class="row  h-100 w-100">
+
+        <div class="col-sm-2 h-100">
+
+            <div class="wrapper h-100" id="wrapper">
+
+                <nav id="sidebar" class="w-100" id="active">
+
+                    <div class="sidebar-header">
+
+                        <h3 class="text-white py-4 text-left pl-4">
+                            <img src="Perfil-Empresa-Instagram_2.png" width="50px" height="50px" alt="Logo">
+                            BestWay Design
+                        </h3>
+
+                    </div>
+
+                    <ul class="lisst-untyled components mt-2">
+
+                        <h5 class="">Cadastros</h5>
+
+                        <li class="text-white p-20 " id="clientes">
+                            Clientes
+                        </li>
+                        <li class="text-white p-20 " id="listaClientes">
+                            Lista de Clientes
+                        </li>
+
+                        <h5 class="">Financeiro</h5>
+
+                        <li id="financeiro" class="text-white p-20 ">
+                             Fluxo Financeiro
+                        </li>
+                        <li id="curva" class="text-white p-20 ">
+                            Curva ABC
+                        </li>
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </div>
+
+        <div class="col-sm-10 h-100 px-4">
+
+            <div class="content h-100">
+
+                <div class="container-fluid" id="formulario">
+
+                    <h2 class="text-success text-center pt-4">Cadastro de Clientes</h2>
+
+                    <div id="formCliente">
+
+                        <form type="submit" class=" was-validated">
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome" placeholder="Ex.:Pedro Jardel Lima"
+                                    name=nome" required>
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Nome é obrigatório</div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-check-label" for="tipoPessoa">Selecione o Tipo Pessoa </label>
+                                <div class="form-group">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" onclick="desabilitaPJ()" type="radio"
+                                            name="inlineRadioOptions" id="inlineRadioPf" value="F">
+                                        <label class="form-check-label" for="inlineCheckbox1">PF</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" onclick="desabilitaPF()" type="radio"
+                                            name="inlineRadioOptions" id="inlineRadioPj" value="J">
+                                        <label class="form-check-label" for="inlineCheckbox2">PJ</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="cpf">CPF</label>
+                                        <input type="text" oninput="mascara(this, 'cpf')" class="form-control" id="cpf"
+                                            placeholder="Ex.:999.999.999-99" name="cpf" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">CPF é obrigatório</div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="rg">RG</label>
+                                        <input type="text" oninput="mascara(this, 'rg')" class="form-control" id="rg"
+                                            placeholder="Ex.:999999999" name="rg" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">RG é obrigatório</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="cnpj">CNPJ</label>
+                                        <input type="text" oninput="mascara(this,'cnpj')" class="form-control" id="cnpj"
+                                            placeholder="Ex.:99.999.999/9999-99" name="cnpj" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">CNPJ é obrigatório</div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="rg">IE</label>
+                                        <input type="text" oninput="mascara(this,'ie')" class="form-control" id="ie"
+                                            placeholder="Ex.:999999999" name="ie" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">IE é obrigatório</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="estado">Estado</label>
+                                        <input type="text" class="form-control" id="estado"
+                                            placeholder="Ex.:Rio Grande do Sul" name="estado" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">EStado é obrigatório</div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" class="form-control" id="cidade" placeholder="Ex.:Pelotas"
+                                            name="cidade" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Cidade é obrigatório</div>
+                                    </div>
+                                    <div class="col">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro" placeholder="Ex.:Centro"
+                                            name="bairro" required>
+                                        <div class="valid-feedback">Valid.</div>
+                                        <div class="invalid-feedback">Bairro é obrigatório</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" name="remember" required>
+                                    Estou de acordo com os termos e condições, em que meus dados <br> serão salvos para
+                                    fins
+                                    de validação de cadastro e preenchimento do sistema.
+                                    <div class="valid-feedback">Valid.</div>
+                                    <div class="invalid-feedback">Concorde com os termos para continuar.</div>
+                                </label>
+                            </div>
+                            <button class="btn btn-success" id="btSalvar">Salvar</button>
+                        </form>
+                    </div>
+                    <div class="hide" id="formListaCliente">
+                        <form type="submit" class="was-validated">
+
+                            <div class="form-group">
+                                <label for="nome">Nome</label>
+                                <input type="text" class="form-control" id="nome1"
+                                    placeholder="Ex.:Pedro Jardel Lima" name="nome">
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="estado">Estado</label>
+                                        <input type="text" class="form-control" id="estado1"
+                                            placeholder="Ex.:Rio Grande do Sul" name="estado">
+                                    </div>
+                                    <div class="col">
+                                        <label for="cidade">Cidade</label>
+                                        <input type="text" class="form-control" id="cidade1" placeholder="Ex.:Pelotas"
+                                            name="cidade">
+                                    </div>
+                                    <div class="col">
+                                        <label for="bairro">Bairro</label>
+                                        <input type="text" class="form-control" id="bairro1" placeholder="Ex.:Centro"
+                                            name="bairro">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-success" id="btPesquisar">Pesquisar</button>
+                            <button type="submit" class="btn btn-info ml-2" id="btRefresh">Limpar Tabela</button>
+                            <button class="btn btn-danger float-right" id="btLimpar">Excluir Lista de Clientes</button>
+                        </form>
+                        <table class="table table-striped table-dark my-4">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Tipo Pessoa</th>
+                                    <th scope="col">Estado</th>
+                                    <th scope="col">Cidade</th>
+                                    <th scope="col">Bairro</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="CadastroCliente2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.wrapper{
+    background-color: #0f3a0f;
+    text-decoration: none;
+    color: #00ffd7;
+}
+
+#sidebar .sidebar-header{
+    background: green;
+}
+
+#sidebar ul.components {
+    border-bottom: 1px solid springgreen;
+}
+
+#sidebar ul li {
+    margin: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+#sidebarCollapse{
+    border-radius: 10px;
+}
+
+.hide{
+    display: none;
+}
